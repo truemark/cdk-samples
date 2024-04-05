@@ -66,6 +66,7 @@ export class OpensearchServerlessStack extends cdk.Stack {
 
     collection.addDependency(encryptionPolicyCfn);
     collection.addDependency(networkPolicyCfn);
+    collection.tags.setTag("collectionUid", this.collectionUid);
   }
   public grantCollectionAccess(
     construct: Construct & { role?: cdk.aws_iam.IRole }
