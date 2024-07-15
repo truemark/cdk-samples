@@ -30,6 +30,7 @@ export class EventCaptureStack extends ExtendedStack {
     }));
 
 
+
      const allEventsRule = new Rule(this, 'AllEventsRule', {
       eventPattern: {
         source: []
